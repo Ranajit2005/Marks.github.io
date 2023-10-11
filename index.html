@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculate</title>
+</head>
+<style>
+    *{
+        margin: 0px;
+        padding: 0px;
+    }
+    body{
+        background-color: black;
+    }
+    h3{
+        color: aliceblue;
+    }
+    .rd{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+</style>
+<body>
+    <h3 class="rd">Calculate Your Mraks of 1st Year</h3>
+    <form onsubmit="marks()" class="rd" id="r">
+        <br><input type="float number" placeholder="Enter your Odd sememster Marks" id="first" ><br><br>
+        <input type="float number" placeholder="Enter your Even sememster Marks" id="second"  ><br><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
+<script>
+    function marks(){
+        var x = parseFloat(document.getElementById("first").value);
+        var y = parseFloat(document.getElementById("second").value);
+        // var z,r;
+        var z = (((x + y) / 2) - .75) * 10;
+        var r = (z * 1400) / 100;
+        document.write("Your marks is : " + r );
+    }
+    // (((((x + y) / 2) - .75) * 10)*1400)/100
+</script>
