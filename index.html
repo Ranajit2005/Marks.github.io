@@ -12,28 +12,48 @@
     }
     body{
         background-color: black;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
     h3{
         color: aliceblue;
     }
-    .rd{
+    .b{
         display: flex;
         align-items: center;
         justify-content: center;
         flex-direction: column;
     }
+    /* .r{
+        height: 100%;
+        width: 100%;
+    } */
     #first,
-    #second{
+    #second
+    {
+        position: relative;
+        height: 100%;
+        width: 100%;
         width: 230px;
+    }
+    #third{
+        position: relative;
+        height: 100%;
+        width: 100%;
+        width: 50px;
     }
 </style>
 <body>
+    <div class="b">
     <h3 class="rd">Calculate Your Marks of 1st Year</h3>
-    <form onsubmit="marks()" class="rd" id="r">
-        <br><input type="float number" placeholder="Enter your Odd sememster Marks" id="first" ><br><br>
-        <input type="float number" placeholder="Enter your Even sememster Marks" id="second"  ><br><br>
-        <input type="submit" value="Submit">
-    </form>
+        <form onsubmit="marks()" class="rd" id="r">
+            <br><input type="float number" placeholder="Enter your Odd sememster Marks" id="first" class="r"><br><br>
+            <input type="float number" placeholder="Enter your Even sememster Marks" id="second"  class="r"><br><br>
+            <input type="submit" value="Submit" class="r" id="third">
+        </form>
+    </div>
 </body>
 </html>
 <script>
